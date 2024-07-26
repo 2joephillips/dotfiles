@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Rofi color theme
+   File: emoji_theme.rasi
+   Desc: Catppuccin Emoji color theme for Rofi
+   Author: 2joephillips
+   ========================================================================== */
+
+configuration {
+  modi: "emoji";
+}
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* catppuccin mocha */
+    base:     	   #1E1E2E;
+    text: 	   #CDD6F4;		
+    peach:         #FAB387;
+    yellow:	   #F9E2AF;			
+    green:         #A6E3A1;
+    blue:	   #89b4fa;
+    crust:         #11111B;
+    mantle:        #181825;
+    overlay2:      #9399b2;
+    surface2:      #585B70;
+    borderRadius:  5px;
+    
+    background-color:   @base;
+    text-color:         @text;
+    border-color:       @blue;
+    width: 50%;
+    font: "FiraCode Nerd Mono 14";
+}
+
+window {
+  background-color: @text-color;
+}
+
+mainbox{
+  padding: 10px;
+}
+
+inputbar {
+  border-radius: @borderRadius;
+  padding: 10px;
+  spacing: 15px;
+  children: ["prompt","entry", "num-filtered-rows", "num-rows", "case-indicator"];
+}
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            @yellow;
+    text-color:                  @yellow;
+    border-radius: 	         @borderRadius;
+}
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    background-color:            @green;
+    text-color:                  @green;
+    border-radius: 	         @borderRadius;
+}
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            @green;
+    text-color:                  @green;
+    border-radius: 	         @borderRadius;
+}
+
+case-indicator {
+  enabled: 			true;
+  expand:			false;
+  background-color:             @blue;
+  text-color: 			@blue;
+  border-radius:		@borderRadius;
+}
+
+prompt, entry {
+  padding: 5px;
+  font: "FiraCode Nerd Mono 16";
+  border-radius: 	         @borderRadius;
+}
+
+prompt {
+  text-transform: uppercase;
+  background-color: @peach;
+  text-color: @base;
+}
+
+entry {
+  text-color: @text;
+  placeholder: "Search...";
+  border: 2;
+  border-color: @crust;
+  background-color: @mantle;
+}
+
+listview {
+  border-radius:		@borderRadius;
+}
+
+element {
+  padding:         5px;
+}
+
+element selected {
+  text-color:       @blue;
+}
+
+element-text selected {
+  text-color:       @blue;
+}
+
