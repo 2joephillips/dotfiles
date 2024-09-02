@@ -1,0 +1,8 @@
+[global]
+username=username
+password=password
+backend="pulseaudio"
+device_name="coffeeshop"
+device_type="computer"
+bitrate=320
+on_song_change_hook="bash /home/joes/Documents/spt_status.sh --update"
